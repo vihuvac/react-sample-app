@@ -10,6 +10,7 @@ script:
   - docker run -e CI=true vihuvac/react-sample-app npm run test
 
 deploy:
+  skip_cleanup: true
   provider: $CI_PROVIDER
   region: $CI_REGION
   app: $CI_APP
