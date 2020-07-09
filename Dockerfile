@@ -22,5 +22,8 @@ RUN npm run build
 # Take the nginx image from docker hub.
 FROM nginx
 
+# Expose the image ports for accessing through them outside the image.
+EXPOSE 80
+
 # Copy the built app.
 COPY --from=builder /app/build /usr/share/nginx/html
